@@ -1,43 +1,16 @@
 fileFormatVersion: 2
-guid: 024743645af3c024f82047e32bc3d8dd
+guid: 841a2d688fac17844b27575cfdd303e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 656819251136980860
-    second: _oute_0
+      213: 8499304164600498653
+    second: route_spriteSheet_0
   - first:
-      213: 4625486339863063681
-    second: _oute_1
+      213: 7101143676117258498
+    second: route_spriteSheet_1
   - first:
-      213: -5712478234691024941
-    second: _oute_2
-  - first:
-      213: -9106064700537003786
-    second: _oute_3
-  - first:
-      213: -273453185073844434
-    second: _oute_4
-  - first:
-      213: 8784906306148825284
-    second: _oute_5
-  - first:
-      213: -6461141305589164298
-    second: _oute_6
-  - first:
-      213: -2756953173610596365
-    second: _oute_7
-  - first:
-      213: -487307305507971063
-    second: _oute_8
-  - first:
-      213: 7104221866614152024
-    second: _oute_9
-  - first:
-      213: 8692264895049249676
-    second: _oute_10
-  - first:
-      213: -7185863268392965012
-    second: _oute_11
+      213: 4090199075676946400
+    second: route_spriteSheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -68,7 +41,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -102,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,7 +98,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _oute_0
+      name: route_spriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -139,14 +112,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7768a101ad7d1900800000000000000
-      internalID: 656819251136980860
+      spriteID: dd9c2014b1893f570800000000000000
+      internalID: 8499304164600498653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _oute_1
+      name: route_spriteSheet_1
       rect:
         serializedVersion: 2
         x: 128
@@ -160,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18ca5f8b157013040800000000000000
-      internalID: 4625486339863063681
+      spriteID: 2011bf9cc845c8260800000000000000
+      internalID: 7101143676117258498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _oute_2
+      name: route_spriteSheet_2
       rect:
         serializedVersion: 2
         x: 256
@@ -181,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d74712cf4339b0b0800000000000000
-      internalID: -5712478234691024941
+      spriteID: 0effa56736e43c830800000000000000
+      internalID: 4090199075676946400
       vertices: []
       indices: 
       edges: []
