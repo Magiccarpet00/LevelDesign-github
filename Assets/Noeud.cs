@@ -20,10 +20,13 @@ public class Noeud : MonoBehaviour
     public bool estNoeudDisjoint;
     public bool utiliser;
 
-    public void Start()
+    public void Awake()
     {
         Renomage();  // renome le nom du noeud avec les coordonnes X;Y
         RegarderVoisins();
+        
+        //DefinireArriver()
+
     }
 
     public void Renomage()
@@ -98,39 +101,26 @@ public class Noeud : MonoBehaviour
 
     }
 
-
-
-
-
-
-
-    public void regarderTuilleVoisine_OLD()
+    public void DefinireArriver(int _x, int _y)
     {
-        Vector2 checkVoisin1 = new Vector2(transform.position.x + 2f, transform.position.y);
-        Vector2 checkVoisin2 = new Vector2(transform.position.x - 2f, transform.position.y);
+        bool voisinTrouver = false;
 
-        Collider2D cd = Physics2D.OverlapCircle(checkVoisin1, 0.3f);
-        Collider2D cd2 = Physics2D.OverlapCircle(checkVoisin2, 0.3f);
-
-        
-
-        if (cd.CompareTag("noeud"))
+        for (int i = 0; i < voisins.Count; i++)
         {
-            Debug.Log("PD VA !" + cd);
-            Noeud n = cd.GetComponent<Noeud>();
-            n.depart = true;            
+            Noeud v = voisins[i].GetComponent<Noeud>();
+            if (v.x == _x && v.y == _y)
+            {
+                v.arrivee = true;
+                voisinTrouver = true;
+            }
         }
 
-
-        if(cd2 != null)
+        if(voisinTrouver == false)
         {
-            if (cd2.CompareTag("noeud"))
-            {
-                Debug.Log("Je t'aime" + cd);
-                Noeud n = cd.GetComponent<Noeud>();
-                n.arrivee = true;
-            }
-        }      
-
+            Debug.Log("DefinireArriver() n'a pas trouver de voisin");
+        }
     }
+
+
+    
 }
