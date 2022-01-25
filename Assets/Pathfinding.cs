@@ -32,7 +32,7 @@ public class Pathfinding
 
             Noeud v = n.GetComponent<Noeud>();
             v.coutG = 10000; // infini
-            int fCost = v.CalculateFCost();
+            float fCost = v.CalculateFCost();
             v.cameFromNode = null;
           
         }
@@ -44,12 +44,10 @@ public class Pathfinding
         
 
     }
-    private int CalculDistance(GameObject a, GameObject b) // hCost
+    private float CalculDistance(GameObject a, GameObject b) // hCost
     {
-        //int xDistance = Mathf.Abs(a.x - b.x);
-        //int yDistance = Mathf.Abs(a.y - b.y);
-        //int remaining = Math.Abs(xDistance - yDistance);
-        //return MOVE_DIAGONAL_COST * Mathf.Min(xDistance, yDistance) + MOVE_STRAIGHT_COST * remaining;
-        return -1;
+        Vector2 distance= a.transform.position - b.transform.position;
+        float i = distance.magnitude;
+        return i;        
     }
 }

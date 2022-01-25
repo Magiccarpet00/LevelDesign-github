@@ -20,7 +20,7 @@ public class Noeud : MonoBehaviour
     public bool estNoeudDisjoint;
     public bool utiliser;
 
-    public int coutG, coutF, coutH;
+    public float coutG, coutF, coutH;
     public Noeud cameFromNode;
 
     public void Awake()
@@ -124,7 +124,7 @@ public class Noeud : MonoBehaviour
         }
     }
 
-    public int CalculateFCost()
+    public float CalculateFCost()
     {
         return coutG + coutH;
     }
