@@ -13,7 +13,7 @@ public class Pathfinding
     }
     public List<GameObject> trouveChemin(int startX, int startY, int endX, int endY)
     {
-     
+
         GameObject startNode, endNode = null;
         startNode = new GameObject();
 
@@ -31,16 +31,15 @@ public class Pathfinding
             {
                 endNode = n;
             }
-            int a = 1;
+            int a = 1; //[Felix dubitatif] : "il sert à quoi lui ?"
         }
 
-        foreach (var n in noeud) {
-
+        foreach (var n in noeud)
+        {
             Noeud v = n.GetComponent<Noeud>();
             v.coutG = 10000; // infini
             float fCost = v.CalculateFCost();
             v.cameFromNode = null;
-          
         }
         startNode.GetComponent<Noeud>().coutG = 0;
         startNode.GetComponent<Noeud>().coutH = CalculDistance(startNode, endNode);
@@ -76,8 +75,8 @@ public class Pathfinding
                         openList.Add(neighborNode);
                     }
                 }
-
-            }
+            }            
+        }
         return new List<GameObject>(); // si on a R
     }
 
@@ -86,12 +85,30 @@ public class Pathfinding
     /** 
      * A faire par Félix ;) 
      * */
-    private List<GameObject> CalculChemin(GameObject endNode)
+    public List<GameObject> CalculChemin(GameObject endNode)
     {
-        return null;
+        List<GameObject> cheminCritique = new List<GameObject>();
+
+        cheminCritique = Recursif(endNode, cheminCritique);
+
+        return cheminCritique;
     }
 
-    private GameObject GetLowestFCostNode(List<GameObject> openList)
+    public List<GameObject> Recursif(GameObject noeud, List<GameObject> _cheminCritique)
+    {
+        if(noeud.GetComponent<Noeud>().cameFromNode == null)
+        {
+            return _cheminCritique;
+        }
+        else
+        {
+            _cheminCritique.Add(noeud.gameObject);
+            Recursif(noeud.GetComponent<Noeud>().cameFromNode.gameObject, _cheminCritique);
+            return _cheminCritique;
+        }
+    }
+
+    public GameObject GetLowestFCostNode(List<GameObject> openList)
     {
         GameObject pn = openList[0];
         for (int i = 1; i < openList.Count; i++)
@@ -104,10 +121,11 @@ public class Pathfinding
         return pn;
     }
 
-    private float CalculDistance(GameObject a, GameObject b) // hCost
+    public float CalculDistance(GameObject a, GameObject b) // hCost
     {
         Vector2 distance= a.transform.position - b.transform.position;
         float i = distance.magnitude;
-        return i;        
+        return i;
     }
 }
+
