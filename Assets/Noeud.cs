@@ -20,6 +20,9 @@ public class Noeud : MonoBehaviour
     public bool estNoeudDisjoint;
     public bool utiliser;
 
+    public int coutG, coutF, coutH;
+    public Noeud cameFromNode;
+
     public void Awake()
     {
         Renomage();  // renome le nom du noeud avec les coordonnes X;Y
@@ -121,6 +124,9 @@ public class Noeud : MonoBehaviour
         }
     }
 
+    public int CalculateFCost()
+    {
+        return coutG + coutH;
+    }
 
-    
 }

@@ -11,9 +11,8 @@ public class TestMainCollision : MonoBehaviour
     {
         Noeud n = noeud[20].GetComponent<Noeud>();
         n.DefinireArriver(2, 0);
-
-
-
+        Pathfinding p = new Pathfinding(noeud);
+        p.trouveChemin(0, 0, 2, 3);
     }
 
     

@@ -5,9 +5,4 @@ using UnityEngine;
 public class Tuille : MonoBehaviour
 {
     public bool isReel;
-    
-    
-   
-
-    
 }
