@@ -2155,7 +2155,7 @@ Transform:
   - {fileID: 108564577}
   - {fileID: 318946317}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049078807
 GameObject:
@@ -2338,7 +2338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488857999256360835, guid: 9dd2b18a196809a4d9c3bb05f8af1e7b, type: 3}
       propertyPath: depart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1705581473485755022, guid: 9dd2b18a196809a4d9c3bb05f8af1e7b, type: 3}
       propertyPath: m_Icon
@@ -4265,6 +4265,14 @@ MonoBehaviour:
   - {fileID: 393638107}
   - {fileID: 1695525765}
   - {fileID: 1927820706}
+  ArriverPottentielle:
+  - {fileID: 1058055479}
+  - {fileID: 458675826}
+  - {fileID: 998880118}
+  - {fileID: 1266126447}
+  - {fileID: 637345973}
+  - {fileID: 2145790697}
+  - {fileID: 2037179432}
 --- !u!4 &1900793987
 Transform:
   m_ObjectHideFlags: 0
@@ -4277,7 +4285,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1908219681
 PrefabInstance:
