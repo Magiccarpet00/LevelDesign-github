@@ -30,8 +30,7 @@ public class Pathfinding
             if (endX == v.x && endY == v.y)
             {
                 endNode = n;
-            }
-            int a = 1; //[Felix dubitatif] : "il sert à quoi lui ?"
+            }            
         }
 
         foreach (var n in noeud)

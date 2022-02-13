@@ -13,13 +13,18 @@ public class Noeud : MonoBehaviour
     public static float Y_OFFSET = 1.6f;
 
     // On va ptet utilse ce type de bool mais pas sur
-    public bool depart;
-    public bool arriveePotentiel;
-    public bool arrivee;
-    public bool surCheminCritique;
-    public bool estNoeudDisjoint;
     public bool utiliser;
+    public bool depart;
+    public bool arrivee;
+    public bool bientotArrivee;
 
+    [HideInInspector]
+    public bool arriveePotentiel;    
+    public bool surCheminCritique;
+    [HideInInspector]
+    public bool estNoeudDisjoint;
+
+    [HideInInspector]
     public float coutG, coutF, coutH;
     public Noeud cameFromNode;
 

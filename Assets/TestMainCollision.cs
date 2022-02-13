@@ -6,16 +6,13 @@ public class TestMainCollision : MonoBehaviour
 
     public GameObject[] noeud;
     public GameObject[] ArriverPottentielle;
+    public GameObject noeudPrefab;
 
     void Start()
     {
-        //setRngArrivee();
 
-        //Pathfinding p = new Pathfinding(noeud);
-        //p.trouveChemin(0, 0, 2, 3);
-
-        PathfindingFelix p = new PathfindingFelix(noeud);
-        p.trouveChemin(0, 2, 2, 3);
+        PathfindingBruteForce p = new PathfindingBruteForce(noeud, noeudPrefab);
+        p.setUp(0, 2, 2, 3);
     }
 
 

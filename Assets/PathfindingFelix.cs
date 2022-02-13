@@ -16,7 +16,7 @@ public class PathfindingFelix
     {
         this.noeud = noeud;
     }
-
+        
     public List<GameObject> trouveChemin(int startX, int startY, int endX, int endY)
     {
         for (int i = 0; i < noeud.Length; i++)
@@ -121,7 +121,7 @@ public class PathfindingFelix
                 }
                 else
                 {
-                    //PreRecursif2();
+                    PreRecursif2();
                 }
             }
             else
@@ -134,19 +134,21 @@ public class PathfindingFelix
         {
             Debug.Log("voisin trouver " + prochainVoisin.x + ":" + prochainVoisin.y);
             cheminCritique.Add(prochainVoisin);
+            prochainVoisin.utiliser = true;
             Recursif2(prochainVoisin);
         }
 
     }
 
     public void PreRecursif2()
-    {
+    {        
         //Effasement de la liste
-        foreach (Noeud vieuxNoeud in cheminCritique)
-        {
-            vieuxNoeud.utiliser = false;
-            cheminCritique.Remove(vieuxNoeud);
-        }
+        
+
+        noeudDepart.GetComponent<Noeud>().depart = true;
+        noeudDepart.GetComponent<Noeud>().utiliser = true;
+        noeudArriver.GetComponent<Noeud>().arrivee = true;
+        noeudArriver.GetComponent<Noeud>().utiliser = true;
 
         // Debut de la recherche du voisin        
         Noeud currentNode = noeudDepart.GetComponent<Noeud>();
@@ -163,7 +165,7 @@ public class PathfindingFelix
         }
     }
 
-
+    
 
 
 }
